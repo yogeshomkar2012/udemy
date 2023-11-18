@@ -7,5 +7,4 @@ covert number string to nmuber like above  */
 
 /**  Coercion is the automatic conversion of 
 values from one data type to another. */
-console.log( +inputYear)
-
+console.log(+inputYear);
