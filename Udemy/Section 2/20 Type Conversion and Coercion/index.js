@@ -9,9 +9,3 @@ covert number string to nmuber like above  */
 values from one data type to another. */
 console.log( +inputYear)
 
-
-
-
-
-
-
