@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #87a6a3;
+}
+.confirm-box {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-box {
+  background: #fff;
+  text-align: center;
+  font-family: arial;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.button-box {
+  margin-top: 30px;
+}
+
+.yes-button,
+.no-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 0 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.yes-button {
+  background: green;
+  color: #fff;
+}
+
+.no-button {
+  background: red;
+  color: #fff;
+}

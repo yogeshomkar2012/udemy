@@ -1,0 +1,48 @@
+/* 
+* CSS Class: *
+* Description: This class targets all elements on the page and applies the following styles:
+* - Sets the box-sizing property to border-box, including padding and border in the element's total width and height.
+* - Sets the padding and margin to 0 for all elements.
+*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+table tr th {
+  border: 1px solid #333;
+  padding: 2px 20px;
+  box-sizing: border-box;
+  background: #b0b0b0;
+}
+table tr td {
+  border: 1px solid #333;
+  padding: 5px 20px;
+  font-size: 18px;
+}
+table {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 200px;
+  height: 18px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+input {
+  width: 200px;
+  height: 18px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}

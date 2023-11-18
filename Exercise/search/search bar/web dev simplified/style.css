@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #87a6a3;
+}
+.search-wrapper {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  /* width: 400px; */
+  gap: 0.25rem;
+}
+input {
+  font-size: 1rem;
+}
+.user-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.card {
+  cursor: pointer;
+  margin: 0.5rem;
+  padding: 0.8rem;
+  border: 1px solid rgb(226, 211, 211);
+  color: #344947;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.card > .header {
+  margin-bottom: 0.25rem;
+}
+
+.card > .body {
+  font-size: 0.8rem;
+}
+.hide {
+  display: none;
+}

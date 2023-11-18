@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+i {
+  cursor: pointer;
+}
+.contact-list-box {
+  overflow-y: scroll;
+  height: 80vh;
+  border-radius: 10px 10px 10px 10px;
+}
+::-webkit-scrollbar {
+  font-size: 10px;
+}
+.contact-list-box h2 {
+  font-size: 15px;
+  border-bottom: 1px solid rgb(247, 244, 244);
+  width: fit-content;
+}
+.contact-list-box .user-icon {
+  font-size: 30px;
+}
+.accordion button {
+  font-size: 20px;
+}
+.accordion .accordion-body h3,
+p {
+  text-align: center;
+  font-size: 20px;
+}
+.option-box {
+  display: flex;
+  width: 30%;
+  justify-content: space-evenly;
+  opacity: 0;
+}
+.option-box i{
+  justify-self:baseline;
+}
+.option-box .fa-trash{
+  color: red;
+}
+.option-box .fa-edit{
+  color:green;
+}
+.option-box.active {
+  opacity: 1;
+}
+.illigal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+}
+.illigal h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.display{
+  display: none;
+}

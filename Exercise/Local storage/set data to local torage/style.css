@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+#userForm{
+  height: 400px;
+  width: 400px;
+  background: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#userForm button{
+  cursor: pointer;
+  background-color: green;
+  color: aliceblue;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 250px;
+  padding: 10px;
+}
+

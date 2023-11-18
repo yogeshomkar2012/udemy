@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form name="userForm">
+      <div class="input-group">
+        <label for="fn">FirstName</label>
+        <input type="text" id="fn" name="fn" class="lname" />
+      </div>
+      <div class="input-group">
+        <label for="ln">LastName</label>
+        <input type="text" id="ln" name="ln" class="lname" />
+      </div>
+      <div class="input-group">
+        <label for="dob">Date Of Birth</label>
+        <input type="date" id="dob" name="dob" class="dob" />
+      </div>
+      <div class="input-group">
+        <label>Gender</label>
+        <input type="radio" name="gender" value="male" />Male
+        <input type="radio" name="gender" value="female" /> Female
+        <input type="radio" name="gender" value="other" /> Other
+      </div>
+      <div class="input-group">
+        <label for="">Languages</label>
+        <input type="checkbox" name="languages" value="English" id="" /> English
+        <input type="checkbox" name="languages" value="Kannada" /> kannada
+        <input type="checkbox" name="languages" value="Hindi" /> Hindi
+      </div>
+      <div class="input-group">
+        <label for="">Select The Course</label>
+        <select name="course" id="">
+          <option value="javascript">javascript</option>
+          <option value="react">react</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="">Address</label>
+        <textarea name="address" id="" cols="10" rows="1"></textarea>
+      </div>
+      <button type="submit" class="add">Add</button>
+    </form>
+    <div class="list">
+
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

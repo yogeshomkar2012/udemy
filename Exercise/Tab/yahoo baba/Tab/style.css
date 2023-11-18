@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #eeecec;
+}
+.tab {
+  width: 500px;
+  overflow: hidden;
+}
+.tab button {
+  background: #4681f4;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(236, 232, 232);
+  transition: background 0.3s;
+}
+.tab button:hover {
+  background: #74aedd;
+}
+.tab button.active {
+  background: #fff;
+  color: #131212;
+}
+.tabcontent {
+  background: #fff;
+  width: 500px;
+  padding: 6px 12px;
+  font-family: arial;
+  line-height: 21px;
+  display: none;
+}
