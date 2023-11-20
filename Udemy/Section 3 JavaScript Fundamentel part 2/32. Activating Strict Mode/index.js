@@ -1,0 +1,2 @@
+// Activating Strict Mode
+"Strict";
