@@ -14,7 +14,7 @@ const fruitProccessor = (apples, oranges) => {
 console.log(fruitProccessor(2, 3));
 
 // Example Two
-const cutPices = () => {
+const cutPices = (fruits) => {
   return fruits * 4;
 };
 
