@@ -1,4 +1,4 @@
-// Exmple One
+// Exmple 1
 const fruitProccessor = (apples, oranges) => {
   const applePieces = (fruits) => {
     return fruits * 4;
@@ -13,7 +13,7 @@ const fruitProccessor = (apples, oranges) => {
 };
 console.log(fruitProccessor(2, 3));
 
-// Example Two
+// Example 2
 const cutPices = (fruits) => {
   return fruits * 4;
 };
