@@ -1,6 +1,5 @@
-"use strict";
-const weekdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
-
+'use strict';
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 const openingHours = {
   [weekdays[3]]: {
     open: 12,
@@ -15,7 +14,6 @@ const openingHours = {
     close: 24,
   },
 };
-
 const order = function (starterIndex, mainIndex) {
   return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
 };
@@ -28,25 +26,21 @@ const orderDelevery = function (obj) {
     `Hello Your Order ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} Will Be Recived To ${address} At ${time}`
   );
 };
-
-const orderPasta = function (ing1, ing2, ing3) {
-  console.log(`Here Is Your Delicious Pasta Witha ${ing1}, ${ing2}, ${ing3}`);
-};
-
 const restaurant = {
-  name: "Classico Italiano",
-  location: "Via Angelo Tavanti 23, Firenze, Italy",
-  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
-  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
-  mainMenu: ["Pizza", "Pasta", "Risotto"],
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
   order,
   orderDelevery,
-  //es6 function format
-  orderPizza(mainIngredients, ...otherIngrediats) {
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here Is Your Delicious Pasta Witha ${ing1}, ${ing2}, ${ing3}`);
+  },
+  orderPizza: function (mainIngredients, ...otherIngrediats) {
     console.log(mainIngredients);
     console.log(otherIngrediats);
   },
-  // object literals
   openingHours,
 };
 console.log(restaurant);
