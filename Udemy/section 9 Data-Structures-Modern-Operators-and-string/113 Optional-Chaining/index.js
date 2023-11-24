@@ -1,6 +1,5 @@
-"use strict";
-const weekdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
-
+'use strict';
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 const openingHours = {
   [weekdays[3]]: {
     open: 12,
@@ -15,7 +14,6 @@ const openingHours = {
     close: 24,
   },
 };
-
 const order = function (starterIndex, mainIndex) {
   return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
 };
@@ -28,35 +26,29 @@ const orderDelevery = function (obj) {
     `Hello Your Order ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} Will Be Recived To ${address} At ${time}`
   );
 };
-
-const orderPasta = function (ing1, ing2, ing3) {
-  console.log(`Here Is Your Delicious Pasta Witha ${ing1}, ${ing2}, ${ing3}`);
-};
-
 const restaurant = {
-  name: "Classico Italiano",
-  location: "Via Angelo Tavanti 23, Firenze, Italy",
-  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
-  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
-  mainMenu: ["Pizza", "Pasta", "Risotto"],
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
   order,
   orderDelevery,
-  //es6 function format
-  orderPizza(mainIngredients, ...otherIngrediats) {
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here Is Your Delicious Pasta Witha ${ing1}, ${ing2}, ${ing3}`);
+  },
+  orderPizza: function (mainIngredients, ...otherIngrediats) {
     console.log(mainIngredients);
     console.log(otherIngrediats);
   },
-  // object literals
   openingHours,
 };
-/**-------------------------------------------- */
 console.log(
-  "The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand."
+  'The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.'
 );
-/*---------------*/
+
 //checking proties exists
 // console.log(restaurant.openingHours.mon.open);
-
 if (restaurant.openingHours && restaurant.openingHours.mon) {
   console.log(restaurant.openingHours.mon.open);
 }
@@ -67,19 +59,17 @@ console.log(restaurant.openingHours.mon?.open);
 console.log(restaurant.openingHours?.mon?.open);
 //code will exicute if openingHours and thu exist
 console.log(restaurant.openingHours?.thu?.open);
-
 for (const day of weekdays) {
-  const open = restaurant.openingHours[day]?.open ?? "closed";
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
   console.log(`on ${day}, we open at ${open}`);
 }
-
 //methods
-console.log(restaurant.order?.(0, 1)) ?? "Method Does Not Exist";
-console.log(restaurant.orderRistto?.(0, 1)) ?? "Method Does Not Exist";
+console.log(restaurant.order?.(0, 1)) ?? 'Method Does Not Exist';
+console.log(restaurant.orderRistto?.(0, 1)) ?? 'Method Does Not Exist';
 
 //Array
-const users = [{ name: "yogesh", email: "yogesh@gmail.com" }];
+const users = [{ name: 'yogesh', email: 'yogesh@gmail.com' }];
 const user = [];
-console.log(`user Name is : ${users[0]?.name}` ?? "user list empty");
-console.log(`user Name is : ${users[0]?.name}` ?? "user list empty");
+console.log(`user Name is : ${users[0]?.name}` ?? 'user list empty');
+console.log(`user Name is : ${users[0]?.name}` ?? 'user list empty');
 console.log(restaurant);
