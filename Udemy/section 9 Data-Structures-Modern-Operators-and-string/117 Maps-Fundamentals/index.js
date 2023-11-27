@@ -1,6 +1,4 @@
-"use strict";
-
-const weekdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
 const openingHours = {
   [weekdays[3]]: {
@@ -35,11 +33,11 @@ const orderPasta = function (ing1, ing2, ing3) {
 };
 
 const restaurant = {
-  name: "Classico Italiano",
-  location: "Via Angelo Tavanti 23, Firenze, Italy",
-  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
-  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
-  mainMenu: ["Pizza", "Pasta", "Risotto"],
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
   order,
   orderDelevery,
   //es6 function format
@@ -50,43 +48,52 @@ const restaurant = {
   // object literals
   openingHours,
 };
-/*--------------------*/
-console.log(`A Map holds key-value pairs where the keys can be any datatype.
-A Map remembers the original insertion order of the keys.
+console.log(`A Map holds key-value pairs where the keys can be 
+any datatype.A Map remembers the original insertion order of 
+the keys.
 A Map has a property that represents the size of the map`);
+//empty map
+const rest = new Map();
+rest.set('name', 'yogesh');
+rest.set('boolean', true);
+rest.set('users', { name: 'yogesh', cotct: 9844944689 });
+rest.set('friends', ['mahesha', 'kamala', 'vimala']);
+
+console.log(rest);
+console.log(...rest.get('friends'));
 
 const fruites = new Map([
-  ["apples", 500],
-  ["Apples", 500],
-  ["bananas", 300],
-  ["oranges", 200],
+  ['apples', 500],
+  ['Apples', 500],
+  ['bananas', 300],
+  ['oranges', 200],
 ]);
 const fruitesSet = new Set([
-  ["apples", 500],
-  ["Apples", 500],
-  ["bananas", 300],
-  ["oranges", 200],
+  ['apples', 500],
+  ['Apples', 500],
+  ['bananas', 300],
+  ['oranges', 200],
 ]);
 console.log(fruites);
-console.log(`apples : ${fruites.get("apples")}`);
-console.log("size method");
+console.log(`apples : ${fruites.get('apples')}`);
+console.log('size method');
 console.log(fruites.size);
-fruites.delete("Apples");
+fruites.delete('Apples');
 console.log(fruites);
 
-const rest = new Map();
+const rests = new Map();
 console.log(`set() method`);
-rest.set("name", "yogsh");
-rest.set(1, "goals");
+rest.set('name', 'yogsh');
+rest.set(1, 'goals');
 rest
-  .set("open", 11)
-  .set("close", 23)
-  .set(true, "we are open")
-  .set(false, "we are close");
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'we are open')
+  .set(false, 'we are close');
 
 const time = 8;
 console.log(
-  rest.get(time > rest.get("open") && rest.get(time < rest.get("close")))
+  rest.get(time > rests.get('open') && rests.get(time < rests.get('close')))
 );
 console.log(time);
 console.log(rest);
@@ -98,9 +105,10 @@ const conMapToArray = [...fruites];
 console.log(conMapToArray);
 console.log(`convert Array to Set`);
 const conArrToSet = new Set(conMapToArray);
-console.log(fruitesSet);
+console.log(...[fruitesSet].flat(Infinity));
 console.log(conArrToSet);
 console.log(`convert map to Set`);
 console.log(new Set(fruites));
 console.log(`convert set to map`);
 console.log(new Map(fruitesSet));
+
