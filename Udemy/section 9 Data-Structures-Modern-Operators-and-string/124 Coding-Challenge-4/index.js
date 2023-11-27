@@ -1,24 +1,4 @@
-"use strict";
-
-const createElements = function (elements) {
-  return document.body.append(document.createElement(elements));
-};
-createElements("textarea");
-createElements("button");
-
-document.querySelector("button").addEventListener("click", function () {
-  const text = document.querySelector("textarea").value;
-  const rows = text.split("\n");
-  for (const [i, row] of rows.entries()) {
-    const [first, second] = row.toLocaleLowerCase().trim().split("_");
-    const output = `${first}${second.replace(
-      second[0],
-      second[0].toUpperCase()
-    )}`;
-    console.log(`${output.padEnd(20)}${"✅".repeat(i + 1)}`);
-  }
-});
-
+'use strict';
 // document.body.append(document.createElement("textarea"));
 // Coding Challenge #4
 /* 
@@ -60,3 +40,21 @@ Afterwards, test with your own test data!
 
 GOOD LUCK 😀
 */
+const createElements = function (elements) {
+  return document.body.append(document.createElement(elements));
+};
+createElements('textarea');
+createElements('button');
+document.querySelector("button").addEventListener("click", function () {
+    const text = document.querySelector("textarea").value;
+    const rows = text.split("\n");
+    for (const [i, row] of rows.entries()) {
+      const [first, second] = row.toLocaleLowerCase().trim().split("_");
+      const output = `${first}${second.replace(
+        second[0],
+        second[0].toUpperCase()
+      )}`;
+      console.log(`${output.padEnd(20)}${"✅".repeat(i + 1)}`);
+    }
+  });
+  
