@@ -1,8 +1,4 @@
-"use strict";
-console.log(`A JavaScript Set is a collection of unique 
-values. Each value can only occur once in a Set.
-A Set can hold any value of any data type.`);
-
+'use strict';
 const orderset = new Set([
   "pasta",
   "pizza",
@@ -15,7 +11,7 @@ const orderset = new Set([
   "gobi",
 ]);
 console.log(`Creates a new Set`);
-console.log(new Set("yogesh"));
+console.log(new Set("yogeshh"));
 console.log(orderset);
 console.log(`size method Returns the number elements in a Set`);
 console.log(orderset.size);
