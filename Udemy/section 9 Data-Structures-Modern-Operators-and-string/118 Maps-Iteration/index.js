@@ -50,25 +50,21 @@ const restaurant = {
   openingHours,
 };
 /*--------------------*/
-
 const questions = new Map([
-  ["question", "what is best programing language"],
-  [1, "C"],
-  [2, "Java"],
-  [3, "javascript"],
-  ["correct", 3],
-  [true, "Correct"],
-  [false, "try Again"],
-]);
-console.log(questions);
-
-console.log(`convert object to map`);
+    ["question", "what is best programing language"],
+    [1, "C"],
+    [2, "Java"],
+    [3, "javascript"],
+    ["correct", 3],
+    [true, "Correct"],
+    [false, "try Again"],
+  ]);
+  console.log(questions);
+  console.log(`convert object to map`);
 console.log(new Map(Object.entries(openingHours)));
-
-console.log(`convert map to object`);
-
 const hoursMap = new Map(Object.entries(openingHours));
 console.log(hoursMap);
+
 //quize app;
 console.log(questions.get("question"));
 for (const [key, value] of questions) {
