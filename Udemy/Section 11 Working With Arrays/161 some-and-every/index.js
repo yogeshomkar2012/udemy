@@ -184,6 +184,22 @@ btnTransfer.addEventListener("click", (e) => {
 
 // ---------------------------------------------------->
 
+btnLoan.addEventListener("click", function (e) {
+  e.preventDefault();
+  const amount = Number(inputLoanAmount.value);
+  if (
+    amount > 0 &&
+    currentAccount.movements.some((mov) => mov >= amount * 0.1)
+  ) {
+    //add movements
+    currentAccount.movements.push(amount);
+    // update UI
+    updateUI(currentAccount);
+  }
+});
+
+// ---------------------------------------------------->
+
 btnClose.addEventListener("click", function (e) {
   e.preventDefault();
   if (
@@ -203,13 +219,161 @@ btnClose.addEventListener("click", function (e) {
 });
 
 // ---------------------------------------------------->
-
-///////////////////////////////////////////
-//Lecture
+////////////////////////////////////
+// LECTURES
 const currencies = new Map([
-  ["USD", "United States dollar"],
-  ["EUR", "Euro"],
-  ["GBP", "Pound sterling"],
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
 ]);
-
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+////////////////////////////
+console.log(`<---------161 Some and Every Method--------->`);
+
+// check if All Movements are positive
+const positiveAllMoves = movements.every((mov) => mov > 0);
+console.log(positiveAllMoves)
+// check if at least one number is positive
+const positiveOneMove = movements.some((mov)=>mov > 0)
+console.log(positiveOneMove)
+
+
+// console.log(`<---------157 The-find-index-Method--------->`);
+// const indexs = movements.findIndex(cu => cu === 450);
+// console.log(typeof indexs);
+// console.log(movements.splice(1, 1));
+
+// console.log(movements);
+
+//////////////////////////////////////
+
+// console.log(`<---------157 The-find-Method--------->`);
+// const firstWithdraal = movements.find(mov => mov < 0);
+// console.log(firstWithdraal);
+
+// console.log(accounts);
+// const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+// console.log(account);
+
+//////////////////////////////////////
+
+/* 
+Rewrite the 'calcAverageHumanAge' function from the previous 
+challenge, but this time as an arrow function, and using 
+chaining!
+
+TEST DATA 1: [5, 2, 4, 1, 15, 8, 3]
+TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
+
+GOOD LUCK 😀
+*/
+// const calcAverageHumanAge = (ages) =>
+//   ages
+//     .map((age) => (age <= 2 ? 2 * age : 16 + age * 4))
+//     .filter((age) => age >= 18)
+//     .reduce((acc, age, i, arr) => acc + age / arr.length, 0);
+
+// const age1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+// const age2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+// console.log(age1, age2);
+//////////////////////////////////////
+
+// console.log(`<---------155 The-Magic-of-Chaining-Methods--------->`);
+// const euroToUsd = 1.1;
+// const totalDepositsUSD = movements
+//   .filter(mov => mov > 0)
+//   .map(mov => mov * euroToUsd)
+//   .reduce((acc, cur) => acc + cur, 0);
+// console.log(totalDepositsUSD);
+// reduce Method
+// console.log(`<---------using filter Method--------->`);
+// const balance = movements.reduce(function (acc, cur, i, arr) {
+//   console.log(`${i} acc -> ${acc} cur -> ${cur} total ${cur + acc}`);
+//   return cur + acc;
+// }, 400);
+// console.log(balance);
+
+// console.log(`<---------using for of loop--------->`);
+// let balanceForOfLoop = 400;
+// for (const [i, mov] of movements.entries()) {
+//   console.log(
+//     `${i} acc -> ${balanceForOfLoop} cur -> ${mov} total ${
+//       balanceForOfLoop + mov
+//     }`
+//   );
+//   balanceForOfLoop = balanceForOfLoop + mov;
+// }
+// console.log(balanceForOfLoop);
+/////////////////////////////////////////////
+// coding Chanllenge
+/* 
+Let's go back to Julia and Kate's study 
+about dogs. This time, they want to convert 
+dog ages to human ages and calculate the 
+average age of the dogs in their study.
+
+Create a function 'calcAverageHumanAge', 
+which accepts an arrays of dog's ages 
+('ages'), and does the following things in order:
+
+1. Calculate the dog age in human years using 
+the following formula: 
+if the dog is <= 2 years old, humanAge = 2 * dogAge. 
+If the dog is > 2 years old, humanAge = 16 + dogAge * 4.
+2. Exclude all dogs that are less than 18 human 
+years old (which is the same as keeping dogs 
+    that are at least 18 years old)
+3. Calculate the average human age of 
+all adult dogs (you should already know 
+    from other challenges how we calculate averages 😉)
+4. Run the function for both test datasets
+
+TEST DATA 1: [5,2, 4, 1, 15, 8, 3]
+TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
+
+GOOD LUCK 😀
+*/
+
+// const calcAverageHumanAge = (ages) => {
+//   const humages = ages.map((age) => (age <= 2 ? 2 * age : 16 + age * 4));
+//   const adults = humages.filter((age) => age >= 18);
+//   const average = adults.reduce((acc, cval) => acc + cval, 0) / adults.length;
+//   return average;
+// };
+// const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+// const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+// console.log(avg1, avg2);
+
+/////////////////////////////////////
+// filter Method
+// console.log(`<---------using filter Method--------->`);
+// const transactions = [100, 200, 300, -100, -200, 900, 300, -50];
+// const positiveValues = transactions.filter(positive => positive > 0);
+// console.log(positiveValues);
+// const negitveValues = transactions.filter(positive => positive < 0);
+// console.log(negitveValues);
+// const deposits = movements.filter(function (mov) {
+//   return mov > 0;
+// });
+// console.log(deposits);
+// console.log(`<---------using for loop--------->`);
+// const depositsForLoop = [];
+// for (let mov of movements) {
+//   mov > 0 ? depositsForLoop.push(mov) : '';
+// }
+// console.log(depositsForLoop);
+//////////////////////////////////////
+// const eurToUsd = 1.1;
+// const movementsUSD = movements.map(function (mov) {
+//   return mov * eurToUsd;
+// });
+// console.log(movementsUSD);
+// // console.log(Math.abs(movementsUSD))
+// console.log(movements);
+// const movementsDecription = movements.map(
+//   (mov, i) =>
+//     `movement ${i + 1} : You ${mov > 0 ? 'Deposited' : 'Withdrawal'} ${Math.abs(
+//       mov
+//     )}`
+// );
+// console.log(movementsDecription);
