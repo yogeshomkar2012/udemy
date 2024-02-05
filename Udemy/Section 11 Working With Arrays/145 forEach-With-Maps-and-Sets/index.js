@@ -95,14 +95,14 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
-console.log(`------forEach-With Map------`)
+console.log(`------forEach-With Map------`);
 currencies.forEach((cv, key, map) => {
   console.log(`${key} : ${cv}`);
 });
-console.log(`------forEach-With Set------`)
+console.log(`------forEach-With Set------`);
 
-const currenciesUnique = new Set(["USD", "GBP", "USD", "EUR", "EUR"]);
+const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
 currencies.forEach((cv, key, arr) => {
-  console.log(`${key} : ${cv} `)
-})
-console.log(currenciesUnique)
+  console.log(`${key} : ${cv} `);
+});
+console.log(currenciesUnique);

@@ -114,3 +114,5 @@ console.log(arr.at(arr.length -2))
 console.log(arr);
 // reverse()
 console.log(arr.reverse())
+// concat()
+// join()
