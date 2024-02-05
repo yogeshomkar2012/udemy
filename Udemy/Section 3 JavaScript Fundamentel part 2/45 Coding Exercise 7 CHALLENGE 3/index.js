@@ -60,7 +60,7 @@ if (mark.bmi > john.bmi) {
     `${john.fullName}'s  BMI (${john.bmi}) is heiher than ${mark.fullName}'s (${mark.bmi})`
   );
 }
-//ternar oprator
+//ternary oprator
 mark.bmi > john.bmi ?  console.log(
   `${mark.fullName}'s  BMI (${mark.bmi}) is heiher than ${john.fullName}'s (${john.bmi})`
 ):console.log(

@@ -96,9 +96,21 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 let arr = ["a", "b", "c", "d", "e"];
+// slice()
+console.log(arr.slice(2, 5))
+console.log(arr)
+console.log(arr.slice(-2));
+// reverse()
+console.log(arr.reverse())
+
+// splice()
+console.log(arr.splice(2, 5))
+console.log(arr)
 // at()
 console.log(arr[0])
 console.log(arr.at(0))
 console.log(arr.at(arr.length -1))
 console.log(arr.at(arr.length -2))
-console.log(arr)
+console.log(arr);
+// reverse()
+console.log(arr.reverse())

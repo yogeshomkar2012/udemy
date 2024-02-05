@@ -4,3 +4,4 @@ let js = "yogesh";
 
 // user is variable after = sign is object containing values
 let user = { name: "yogesh" }
+console.log( user)
