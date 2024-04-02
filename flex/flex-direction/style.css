@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column-reverse;
+  border: 3px solid black;
+}
+
+.flex-item {
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.item-1 {
+  background: blue;
+}
+.item-2 {
+  background: rgb(158, 133, 132);
+}
+.item-3 {
+  background: rgb(9, 236, 47);
+}
+.item-4 {
+  background: rgb(247, 0, 255);
+}
+.item-5 {
+  background: rgb(255, 0, 0);
+}
+.item-6 {
+  background: rgb(217, 255, 0);
+}
+.item-7 {
+  background: rgb(255, 0, 191);
+}
+.item-8 {
+  background: rgb(0, 255, 179);
+}
+.item-9 {
+  background: rgb(0, 204, 255);
+}
+.item-10 {
+  background: rgb(0, 255, 128);
+}
