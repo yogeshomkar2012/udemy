@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(236, 233, 233);
+}
+.header {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid rgb(216, 210, 210);
+}
+.nav-bar-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.left-header {
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start;
+  flex-basis: 70%;
+  justify-content: space-evenly;
+}
+.log {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+}
+.log h3 {
+  font-size: 15px;
+  margin-bottom: 0;
+  color: #4e4d4d;
+  font-weight: 400;
+}
+.nav {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: flex-start;
+}
+.nav_ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  flex-basis: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_ul li {
+  display: flex;
+  text-transform: uppercase;
+  padding: 2px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.right-header {
+  display: flex;
+  flex-basis: 30%;
+}
+.login_container {
+  display: flex;
+  flex-basis: 100%;
+}
+.login {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  align-items: center;
+  flex-basis: 100%;
+}
+.login_values {
+  display: flex;
+  width: 100px;
+  border: none;
+  height: 25px;
+  border-radius: 10px;
+  margin: 2px;
+  text-align: center;
+}
+.login_button {
+  height: 100%;
+  width: 30px;
+  font-size: 20px;
+  border: none;
+}
+.login_button :hover {
+    background-color: rgb(110, 109, 109);
+  color: rgb(110, 109, 109);
+}
+.main-section {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  height: 500px;
+}
+.user-data {
+  opacity: 0;
+  background-color: #999797;
+  width: 100%;
+  padding: 20px;
+  height: 200px;
+  border-radius: 10px;
+}

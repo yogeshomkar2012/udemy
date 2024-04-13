@@ -80,10 +80,12 @@ const displayMovements = movements => {
 };
 
 displayMovements(account1.movements);
+
 const calcdisplayBalance = function (movements) {
   const balance = movements.reduce((acc, mov) => acc + mov, 0);
   labelBalance.textContent = `${balance} €`;
 };
+
 const calDisplaySummary = function (movements) {
   const incomes = movements
     .filter(mov => mov > 0)
