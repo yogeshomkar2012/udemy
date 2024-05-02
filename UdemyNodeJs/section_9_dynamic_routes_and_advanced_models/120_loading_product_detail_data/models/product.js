@@ -32,16 +32,17 @@ module.exports = class Product {
       fs.writeFile(p, JSON.stringify(products), err => {
         console.log(err);
       });
-     console.log( products.length);
     });
   }
 
   static fetchAll(cb) {
     getProductsFromFile(cb);
   }
-  static findById() {
-    getProductsFromFile((products) => {
-      console.log(products)
-    })
+
+  static findById(id, cb) {
+    getProductsFromFile(products => {
+      const product = products.find(p => p.id === id);
+      cb(product);
+    });
   }
 };

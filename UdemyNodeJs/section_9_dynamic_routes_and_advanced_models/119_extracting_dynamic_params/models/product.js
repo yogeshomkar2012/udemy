@@ -32,7 +32,6 @@ module.exports = class Product {
       fs.writeFile(p, JSON.stringify(products), err => {
         console.log(err);
       });
-     console.log( products.length);
     });
   }
 
