@@ -1,0 +1,13 @@
+#add-product-form{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#add-product-form form{
+    border-radius: 6px;
+    border: 1px solid rgba(158, 151, 151, 0.719);
+    padding: 3rem;
+    height: fit-content;
+}

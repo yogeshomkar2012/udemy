@@ -1,0 +1,38 @@
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a class="<%= path === '/' ? 'active':'' %>" href="/">
+          <i class="fa-solid fa-shop"></i>
+          Shop
+        </a>
+      </li>
+      <li>
+        <a class="<%= path === '/cart'?'active':''%>" href="/cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          cart</a>
+      </li>
+      <li>
+        <a class="<%= path === '/checkout'?'active':''%>" href="/checkout">checkout</a>
+      </li>
+      <li>
+        <a class="<%= path === '/orders'?'active':''%>" href="/orders">
+          <i class="fa-solid fa-bag-shopping"></i>
+          Orders
+        </a>
+      </li>  
+      <li>
+        <a class="<%= path === '/products'?'active':''%>" href="/products">
+          <i class="fa-brands fa-product-hunt"></i>
+          Products
+        </a>
+      </li>
+      <li>
+        <a class="<%= path === '/admin/add-product'?'active':''%>" href="/admin/add-product">Add Product</a>
+      </li>
+      <li>
+        <a class="<%= path === '/admin/products'?'active':''%>" href="/admin/products">Admin Products</a>
+      </li>
+    </ul>
+  </nav>
+</header>
