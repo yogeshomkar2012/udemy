@@ -11,6 +11,7 @@ exports.getProducts = (req, res, next) => {
 };
 
 ///////////single Product///////////
+//120_loading_product_detail_data//
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
   Product.findById(prodId, product => {
