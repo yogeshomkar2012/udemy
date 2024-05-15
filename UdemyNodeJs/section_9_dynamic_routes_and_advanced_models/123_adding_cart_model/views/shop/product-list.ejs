@@ -28,9 +28,7 @@
                                 </div>
                                 <div class="card__actions">
                                     <a href="/products/<%= product.id %>" class="btn">Details</a>
-                                   <!-- 122_passing_data_with_post_requests -->
-                                    <%- include('../includes/add-to-cart.ejs',{product:product})%>
-                                    <!-- 122_passing_data_with_post_requests -->
+                                    <%- include('../includes/add-to-cart.ejs', {product: product}) %>
                                 </div>
                             </article>
                             <% } %>
