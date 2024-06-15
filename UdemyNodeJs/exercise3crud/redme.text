@@ -1,0 +1,13 @@
+********************back end packages**************************
+1. express js
+2. mongoose
+3. ejs (template engene);
+4. multer (image uploading);
+5. express sessinon (storing session messages);
+6. dotenv (environmental variables);
+7. nodemone (auto running / monitaring server);
+*******************frontend packages**************************
+1. bootstrap (designing purpuse);
+2. dataTable (pagination, sorting etc);
+3. fontawesome (icons);
+**************************************************************

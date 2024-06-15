@@ -1,0 +1,162 @@
+header {
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+}
+
+header .headerTop,
+.headerBot {
+  height: 50%;
+  background-color: var(--varHeaderColor);
+}
+header .headerTop {
+  display: flex;
+}
+header .headerTop .contactInfo,
+.searchinfo {
+  flex-basis: 50%;
+}
+header .headerTop .contactInfo {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+header .headerTop .contactInfo .cnInfo,
+.mailInfo {
+  padding: 1rem;
+}
+header .headerTop .contactInfo .cnInfo i,
+.mailInfo i {
+  color: var(--varButtonBorderWhiteColor);
+  border-radius: 0.8rem;
+  padding: 0.8rem;
+  border: 0.1rem solid var(--varHeaderBorderColor);
+}
+header .headerTop .contactInfo .cnInfo span,
+.mailInfo span {
+  color: white;
+  font-style: initial;
+  font-weight: 300;
+}
+header .headerTop .searchinfo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+header .headerTop .searchinfo .trakSerch {
+  /* border: 0.1rem solid red; */
+  /* height: 25px; */
+  width: 24rem;
+  border-radius: 0.5rem;
+  height: 3rem;
+  background-color: var(--varButtonBorderWhiteColor);
+}
+header .headerTop .searchinfo .trakSerch i {
+  font-size: 1.6rem;
+}
+header .headerTop .searchinfo .trakSerch input {
+  height: 3rem;
+  width: 21rem;
+  border: none;
+  border-right: rem1rem solid rgb(129, 120, 120);
+  background: transparent;
+  outline: none;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.login {
+  height: 3rem;
+  border-radius: 1rem;
+  width: 6rem;
+  margin-right: 1rem;
+}
+.login .logibtn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 0.1rem solid var(--varHeaderBorderColor);
+  height: 100%;
+  width: 100%;
+  border-radius: 1.1rem;
+  background-color: var(--varHeaderColor);
+}
+.login .person,
+.arrow {
+  font-weight: bold;
+  color: var(--varButtonBorderWhiteColor);
+  font-size: 1.8rem;
+}
+.loginList {
+  display: none;
+}
+/* ------------- */
+header .headerBot {
+  background-color: var(--varFontWhiteColor);
+  display: flex;
+}
+header .headerBot .logo,
+.indexNav {
+  flex-basis: 50%;
+}
+header .headerBot .indexNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .headerBot .indexNav ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+}
+header .headerBot .indexNav ul li {
+  cursor: pointer;
+  list-style-type: none;
+  padding: 0.5rem;
+  width: 25%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .headerBot .indexNav ul li:hover a {
+  animation-name: slide-in-bottom;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  color: var(--varHeaderColor);
+}
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+header .headerBot .indexNav ul li a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--varFontColor);
+}
+header .headerBot .logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+}
+.logo{
+  background-image: url('../../images/logo.png');
+ /* background-color: aquamarine; */
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,10 @@
+:root {
+    --varHeaderColor: rgba(0, 168, 89, 1);
+    --varHeaderBorderColor: rgb(170, 214, 194);
+    --varButtonBorderGreenColor: rgba(0, 168, 89, 1);
+    --varButtonBorderWhiteColor: rgb(255, 255, 255);
+    --varBackGroundColor: rgba(241, 243, 244, 1);
+    --varfooterColor: rgba(33, 33, 33, 1);
+    --varFontColor: rgba(153, 162, 191, 1);
+    --varFontHoverColor: rgba(252, 173, 91, 1);
+  }
