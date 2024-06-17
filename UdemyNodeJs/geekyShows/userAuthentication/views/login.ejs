@@ -1,0 +1,31 @@
+<%- include('./includes/header.ejs') %>
+<div class="container mt-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-6">
+      <h1>Login</h1>
+      <hr />
+      <form method="post">
+        <div class="mb-3">
+          <label for="name" class="form-label">email</label>
+          <input type="text" class="form-control" id="name" name="email" />
+        </div>
+        <!-- <div class="mb-3">
+          <label for="email" class="form-label">email</label>
+          <input name="email" type="text" class="form-control" id="email" />
+        </div> -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            name="password"
+            type="password"
+            class="form-control"
+            id="password"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('./includes/footer.ejs') %>
